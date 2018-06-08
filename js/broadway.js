@@ -44,7 +44,7 @@ function setupInfo() {
  * Runs the program
  */
 function run() {
-  // setupInfo();
+  setupInfo();
 	enterDirectLotteries();
 	enterSocialLotteries();
 	enterBulkLotteries();
