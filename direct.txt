@@ -1,3 +1,9 @@
+// Use jQuery
+let jq = document.createElement("script");
+jq.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
+document.getElementsByTagName("head")[0].appendChild(jq);
+
+// Store personal information in variables
 let firstName,
     lastName,
     email,
@@ -10,8 +16,6 @@ let firstName,
  * Prompts user for information used to fill out forms
  */
 function setupInfo() {
-  // alert("Please fill out your personal information. This will only be used to" +
-  //  " enter the lottery and will not be saved anywhere.");
   firstName = prompt("First name");
   lastName = prompt("Last name");
   email = prompt("E-mail address");
@@ -21,4 +25,12 @@ function setupInfo() {
   birthYear = parseInt(prompt("Birth year (4-digit integer)"));
 }
 
+/*
+ * Fills out the broadwaydirect.com lottery form using the given information
+ */
+function fillForm() {
+  // $("#dlslot-field-name_first").
+}
+
+setupInfo();
 
