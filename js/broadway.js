@@ -36,7 +36,7 @@ let directory,
  */
 function setupInfo() {
   // alert("Please fill out your personal information. This will only be used to" +
-    " enter the lottery and will not be saved anywhere.");
+  //  " enter the lottery and will not be saved anywhere.");
   directory = prompt("Full directory of the bfbb folder");
 }
 
