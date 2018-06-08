@@ -1,0 +1,21 @@
+{
+  "name": "Broadway Lottery Helper",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Autocomplete for Broadway Lottery",
+  "homepage_url": "http://clarkxie.com",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Inject!"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs"
+  ]
+}

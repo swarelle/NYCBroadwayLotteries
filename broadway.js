@@ -16,14 +16,14 @@ const socialEnter = [
 const bulkEnter = [
 		"http://www.luckyseat.com/book-of-mormon/", // The Book of Mormon
 		"https://www.luckyseat.com/hamilton-ny/", // Hamilton
-		"http://lottery.kinkybootsthemusical.com/", // Kinky Boots
+		// "http://lottery.kinkybootsthemusical.com/", // Kinky Boots
 		"https://www.luckyseat.com/mean-girls/", // Mean Girls
 		"http://www.luckyseat.com/springsteen-broadway/" // Springsteen on Broadway
 	];
 
 function run() {
-	enterDirectLotteries();
-	enterSocialLotteries();
+	// enterDirectLotteries();
+	// enterSocialLotteries();
 	enterBulkLotteries();
 }
 
@@ -38,30 +38,19 @@ function openPages(urls) {
 		// Open the URL in a new tab/window and push the opened window object into the array
 		opened.push(window.open(url, "_blank"));
 	}
-  return opened;
-}
-
-function appendScript(opened, script) {
-	for (const win of opened) {
-		const scriptEl = win.document.createElement("script");
-    scriptEl.src = script;
-    win.document.head.appendChild(scriptEl);
-	}
+	return opened;
 }
 
 function enterDirectLotteries() {
-  const opened = openPages(directEnter);
-  appendScript(opened, "./directLottery.js");
+	const opened = openPages(directEnter);
 }
 
 function enterSocialLotteries() {
-  const opened = openPages(socialEnter);
-  appendScript(opened, "./socialLottery.js");
+	const opened = openPages(socialEnter);
 }
 
 function enterBulkLotteries() {
-  const opened = openPages(bulkEnter);
-  appendScript(opened, "./bulkLottery.js");
+	const opened = openPages(bulkEnter);
 }
 
 run();
