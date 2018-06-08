@@ -21,7 +21,30 @@ const bulkEnter = [
 		"http://www.luckyseat.com/springsteen-broadway/" // Springsteen on Broadway
 	];
 
+let directory,
+    firstName,
+    lastName,
+    email,
+    zipCode,
+    phoneNumber,
+    birthDay,
+    birthMonth,
+    birthYear;
+
+/*
+ * Prompts user for information used to fill out forms
+ */
+function setupInfo() {
+  // alert("Please fill out your personal information. This will only be used to" +
+    " enter the lottery and will not be saved anywhere.");
+  directory = prompt("Full directory of the bfbb folder");
+}
+
+/*
+ * Runs the program
+ */
 function run() {
+  // setupInfo();
 	enterDirectLotteries();
 	enterSocialLotteries();
 	enterBulkLotteries();
@@ -51,17 +74,17 @@ function appendScript(opened, script) {
 
 function enterDirectLotteries() {
   const opened = openPages(directEnter);
-  appendScript(opened, "./directLottery.js");
+  appendScript(opened, directory + "/js/directLottery.js");
 }
 
 function enterSocialLotteries() {
   const opened = openPages(socialEnter);
-  appendScript(opened, "./socialLottery.js");
+  appendScript(opened, directory + "/js/socialLottery.js");
 }
 
 function enterBulkLotteries() {
   const opened = openPages(bulkEnter);
-  appendScript(opened, "./bulkLottery.js");
+  appendScript(opened, directory + "/js/bulkLottery.js");
 }
 
 run();
