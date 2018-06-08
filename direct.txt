@@ -1,0 +1,24 @@
+let firstName,
+    lastName,
+    email,
+    zipCode,
+    birthDay,
+    birthMonth,
+    birthYear;
+
+/*
+ * Prompts user for information used to fill out forms
+ */
+function setupInfo() {
+  // alert("Please fill out your personal information. This will only be used to" +
+  //  " enter the lottery and will not be saved anywhere.");
+  firstName = prompt("First name");
+  lastName = prompt("Last name");
+  email = prompt("E-mail address");
+  zipCode = prompt("Zip code");
+  birthDay = parseInt(prompt("Birth day (integer)"));
+  birthMonth = parseInt(prompt("Birth Month (integer)"));
+  birthYear = parseInt(prompt("Birth year (4-digit integer)"));
+}
+
+

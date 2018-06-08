@@ -2,7 +2,6 @@ let firstName,
     lastName,
     email,
     zipCode,
-    phoneNumber,
     birthDay,
     birthMonth,
     birthYear;
@@ -17,8 +16,9 @@ function setupInfo() {
   lastName = prompt("Last name");
   email = prompt("E-mail address");
   zipCode = prompt("Zip code");
-  phoneNumber = prompt("Phone number");
   birthDay = parseInt(prompt("Birth day (integer)"));
   birthMonth = parseInt(prompt("Birth Month (integer)"));
   birthYear = parseInt(prompt("Birth year (4-digit integer)"));
 }
+
+
